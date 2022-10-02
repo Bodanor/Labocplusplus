@@ -1,6 +1,7 @@
 #include "Modele.h"
 
 #include<iostream>
+#include <ostream>
 #include<string.h>
 
 using namespace std;
@@ -118,13 +119,28 @@ Modele::~Modele()
 
 void Modele::Affiche()const
 {
-    cout<<nom<<""<<puissance<<""<<moteur<<""<<prix<<endl;
+    cout<< "Nom : "<<nom << endl;
+    cout << "Puissance : "<< puissance << endl;
+    cout << "Moteur : ";
 
-    /* switch (moteur)
+    switch (moteur)
     {
     case Essence : 
-        cout<<"Essence";
+        cout<<"Essence ";
         break;
-    
-    } */
+    case Diesel:
+        cout <<"Diesel ";
+        break;
+    case Electrique:
+        cout << "Electrique ";
+        break;
+    case Hybride:
+        cout << "Hybride ";
+        break;
+    default:
+        cout << "Inconnu ";
+        break;
+    }
+    cout << endl;
+    cout << "Prix : " << prix << "Euros" << endl;
 }
