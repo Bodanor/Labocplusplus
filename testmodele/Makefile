@@ -12,4 +12,5 @@ prog: $(CPP_OBJECTS)
 	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm -rf 
+	rm -rf *.o
+	rm -rf prog

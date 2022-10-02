@@ -17,15 +17,15 @@ class Modele
         Modele(const Modele &);
         ~Modele();
 
-        const char * getnom()const;//"return de la variable"
-        int getpuissance()const;
-        Moteur getmoteur()const;
-        float getprix()const;
+        const char * getNom()const;//"return de la variable"
+        int getPuissance()const;
+        Moteur getMoteur()const;
+        float getPrixDeBase()const;
 
         void setNom(const char *);
-        void setpuissance(int);
-        void setmoteur(Moteur);
-        void setprix(float);
+        void setPuissance(int);
+        void setMoteur(Moteur);
+        void setPrixDeBase(float);
         
         void Affiche()const;//Ne modfifie pas les variables membres
 };

@@ -26,22 +26,22 @@ Modele::Modele()
 
 /********************************Getters et Setters**********************************/
 
-const char * Modele::getnom()const
+const char * Modele::getNom()const
 {
     return nom;
 }
 
-int Modele::getpuissance()const
+int Modele::getPuissance()const
 {
     return puissance;
 }
 
-Moteur Modele:: getmoteur()const
+Moteur Modele:: getMoteur()const
 {
     return moteur;
 }
 
-float Modele::getprix()const
+float Modele::getPrixDeBase()const
 {
     return prix;
 }
@@ -54,18 +54,18 @@ void Modele::setNom(const char *n)
     strcpy(nom, n);
 }
 
-void Modele::setpuissance(int p)
+void Modele::setPuissance(int p)
 {
     if(p>=0)
         puissance = p;
 }
 
-void Modele::setmoteur(Moteur m)
+void Modele::setMoteur(Moteur m)
 {
     moteur = m;
 }
 
-void Modele::setprix(float pr)
+void Modele::setPrixDeBase(float pr)
 {
     prix = pr;
 }
@@ -82,9 +82,9 @@ Modele:: Modele(const char *n, int p, Moteur m, float pr)
 
     nom = NULL;
     setNom(n);
-    setpuissance(p);
-    setmoteur(m);
-    setprix(pr);
+    setPuissance(p);
+    setMoteur(m);
+    setPrixDeBase(pr);
 }
 
 Modele::Modele(const Modele &source)
@@ -96,10 +96,10 @@ Modele::Modele(const Modele &source)
     #endif 
 
     nom = NULL;
-    setNom(source.getnom());
-    setpuissance(source.getpuissance());
-    setmoteur(source.getmoteur());
-    setprix(source.getprix()); 
+    setNom(source.getNom());
+    setPuissance(source.getPuissance());
+    setMoteur(source.getMoteur());
+    setPrixDeBase(source.getPrixDeBase()); 
 }
 
 Modele::~Modele()
