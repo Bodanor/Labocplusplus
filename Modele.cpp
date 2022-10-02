@@ -46,7 +46,7 @@ float Modele::getprix()const
     return prix;
 }
 
-void Modele::setnom(const char *n)
+void Modele::setNom(const char *n)
 {
     if(nom!=NULL)
         delete[] nom;
@@ -81,7 +81,7 @@ Modele:: Modele(const char *n, int p, Moteur m, float pr)
     #endif 
 
     nom = NULL;
-    setnom(n);
+    setNom(n);
     setpuissance(p);
     setmoteur(m);
     setprix(pr);
@@ -96,7 +96,7 @@ Modele::Modele(const Modele &source)
     #endif 
 
     nom = NULL;
-    setnom(source.getnom());
+    setNom(source.getnom());
     setpuissance(source.getpuissance());
     setmoteur(source.getmoteur());
     setprix(source.getprix()); 
